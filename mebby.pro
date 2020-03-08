@@ -6,7 +6,7 @@ TEMPLATE = lib
 TARGET = mebby
 INCLUDEPATH += .
 QT += websockets
-CONFIG += c++14
+CONFIG += c++17
 
 # You can make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -17,16 +17,15 @@ CONFIG += c++14
 
 # Input
 HEADERS += \
-	IMessage.h \
-	IMessageCallback.h \
-	IMessageResolver.h \
-	MessageFilter.h \
-	MessageFilterProxy.h \
-	MessageResolver.h \
-	MessageWriter.h
+	Mebby.h \
+	Mebby
 
 OTHER_FILES += \
 	mebby.prf
+
+INSTALLS += headers target features
+
+SOURCES +=
 
 headers.files = $${HEADERS}
 headers.path = $$[QT_INSTALL_HEADERS]/Mebby
@@ -35,5 +34,3 @@ target.path = $$[QT_INSTALL_LIBS]
 
 features.files = mebby.prf
 features.path = $$[QMAKE_MKSPECS]/features
-
-INSTALLS += headers target features
