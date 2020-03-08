@@ -1,0 +1,2 @@
+INCLUDEPATH += $$[QT_INSTALL_HEADERS]/Mebby
+LIBS += -l$$qtLibraryTarget(Mebby)
